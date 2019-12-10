@@ -40,22 +40,8 @@ class MusicTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TrackCell else { return UITableViewCell()}
-        
         let track = tracks[indexPath.row]
-        cell.titleLabel?.text = track.trackName
-        cell.subtitleLabel?.text = track.artistName
-        cell.imageTrack.contentMode = .scaleAspectFit
-        cell.imageTrack.layer.cornerRadius = cell.imageTrack.frame.height / 2
-        
-        DispatchQueue.global(qos: .background).async{
-            if let url = URL(string: track.artworkUrl100!){
-                AF.request(url, method: .get).response { response in
-                    guard let image = UIImage(data:response.data!) else { return }
-                    let imageData = image.jpegData(compressionQuality: 1.0)
-                    cell.imageTrack.image = UIImage(data : imageData!)
-                }
-            }
-        }
+        cell.track = track
         return cell
     }
 }
