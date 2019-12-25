@@ -17,6 +17,7 @@
 		80935C432396A46D00FF2562 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80935C422396A46D00FF2562 /* NetworkService.swift */; };
 		80935C452396A50C00FF2562 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80935C442396A50C00FF2562 /* SearchResponse.swift */; };
 		80A8A89F2396C49800B110E2 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8A89E2396C49800B110E2 /* TrackCell.swift */; };
+		80CE76D723A883290079787C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE76D623A883290079787C /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		80935C422396A46D00FF2562 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		80935C442396A50C00FF2562 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		80A8A89E2396C49800B110E2 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		80CE76D623A883290079787C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				8058602823968EFD00F36762 /* MusicTableViewController.swift */,
+				80CE76D623A883290079787C /* DetailViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				8058602923968EFD00F36762 /* MusicTableViewController.swift in Sources */,
 				80935C432396A46D00FF2562 /* NetworkService.swift in Sources */,
 				80A8A89F2396C49800B110E2 /* TrackCell.swift in Sources */,
+				80CE76D723A883290079787C /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

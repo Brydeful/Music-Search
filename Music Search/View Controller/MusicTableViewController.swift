@@ -44,6 +44,14 @@ class MusicTableViewController: UITableViewController {
         cell.track = track
         return cell
     }
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let track = tracks[indexPath.row]
+        performSegue(withIdentifier: "detailSegue", sender: track)
+    }
+    
 }
 
 // MARK: - UISearchBarDelegate
@@ -54,6 +62,15 @@ extension MusicTableViewController: UISearchBarDelegate{
             guard let searchResponse = searchResponse else {return}
             self?.tracks = searchResponse.results
             self?.tableView.reloadData()
+        }
+    }
+}
+
+extension MusicTableViewController{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let track = sender as? Track{
+          let detailViewController =  segue.destination as? DetailViewController
+            detailViewController?.track = track
         }
     }
 }
